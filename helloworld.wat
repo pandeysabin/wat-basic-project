@@ -7,8 +7,7 @@
 
     (data (global.get $start_string) "hello world!")
 
-    (func (export "helloworld") (result i32)
+    (func (export "helloworld")
         (call $print_string(global.get $string_len))
-        (i32.const 0)
     )
 )
