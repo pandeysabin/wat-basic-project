@@ -29,8 +29,8 @@
         ;; length of the second string is 35 characters
         (call $str_pos_len (i32.const 384) (i32.const 35))
 
-        (call $string_copy
-            (i32.const 256) (i32.const 384) (i32.const 30))
+        ;; (call $string_copy
+        ;;     (i32.const 256) (i32.const 384) (i32.const 30))
 
         (call $str_pos_len (i32.const 384) (i32.const 30))
         (call $str_pos_len (i32.const 384) (i32.const 35))
@@ -77,6 +77,7 @@
 
     (func $byte_copy_i64
         (param $source i32) (param $dest i32) (param $len i32)
+        
         (local $last_source_byte i32)
         
         local.get $source
@@ -106,6 +107,7 @@
                 br $copy_loop
             )
         )
+        return
     )
 
     (func $string_copy
