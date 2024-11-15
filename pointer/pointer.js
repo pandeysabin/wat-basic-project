@@ -10,6 +10,6 @@ const importObject = {
 
 (async () => {
   let obj = await WebAssembly.instantiate(new Uint8Array(bytes), importObject);
-  let pointer_value = obj.instance.exports.get_prt();
+  let pointer_value = obj.instance.exports.get_ptr();
   console.log(`pointer_value=${pointer_value}`);
 })();
