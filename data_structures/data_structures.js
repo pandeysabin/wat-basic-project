@@ -61,7 +61,7 @@ for (let i = 0; i < obj_count; i++) {
 
     let x = mem_i32[index + x_offset_i32].toString().padStart(2, " ");
     let y = mem_i32[index + y_offset_i32].toString().padStart(2, " ");
-    let r = mem_i32[index + radius_offset_i32].toString().padStart(2, "");
+    let r = mem_i32[index + radius_offset_i32].toString().padStart(2, " ");
 
     let i_str = i.toString().padStart(2, "0");
     let c = !!mem_i32[index + collision_offset_i32];
